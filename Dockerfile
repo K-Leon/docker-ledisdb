@@ -10,7 +10,7 @@ RUN mkdir -p $GOPATH/src/github.com/siddontang && \
     cd $GOPATH/src/github.com/siddontang && \
     git clone https://github.com/unoexperto/ledisdb.git && \
     cd ledisdb && \
-    ln -s ./cmd/vendor ./vendor && bash dev.sh && make && \
+    ln -s ./cmd/vendor ./vendor && bash dev.sh && make build_all && \
     mv ./bin/ledis* $GOPATH/bin/
 
 RUN apk del build-base linux-headers git cmake bash
