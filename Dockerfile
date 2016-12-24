@@ -3,7 +3,7 @@ MAINTAINER unoexperto <unoexperto.support@mailnull.com>
 
 EXPOSE 6380 11181
 
-RUN apk add lua5.1 lua5.1-dev
+RUN apk add lua5.3 lua5.3-dev --update-cache --repository http://nl.alpinelinux.org/alpine/edge/testing
 
 # Compile and build LedisDB
 RUN mkdir -p $GOPATH/src/github.com/siddontang && \
